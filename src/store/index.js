@@ -4,7 +4,7 @@ const defaultState = {
   counter: 0,
 };
 
-const counterReducer = (prevState, action) => {
+const counterReducer = (prevState = defaultState, action) => {
   if (action.type === 'INCREMENT') {
     return {
       counter: prevState.counter + 1,
