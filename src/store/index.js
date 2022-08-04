@@ -11,6 +11,12 @@ const counterReducer = (prevState = defaultState, action) => {
     };
   }
 
+  if (action.type === 'INCREASE') {
+    return {
+      counter: prevState.counter + action.amount,
+    };
+  }
+
   if (action.type === 'DECREMENT') {
     return {
       counter: prevState.counter - 1,
