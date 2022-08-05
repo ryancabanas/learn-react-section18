@@ -9,16 +9,16 @@ const counterSlice = createSlice({
   name: 'counter',
   initialState,
   reducers: {
-    increment(state) {
+    increment: (state) => {
       state.counter++;
     },
-    decrement(state) {
+    decrement: (state) => {
       state.counter--;
     },
-    increase(state, action) {
+    increase: (state, action) => {
       state.counter = state.counter + action.payload;
     },
-    toggleCounter(state) {
+    toggleCounter: (state) => {
       state.isCounterHidden = !state.isCounterHidden;
     },
   },
